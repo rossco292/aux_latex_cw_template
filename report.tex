@@ -70,83 +70,99 @@
 \begin{document}
 	\maketitle
 	\begin{abstract}
-		The goal of this project is too create a decent looking forest camping scene.  Some features that are implemented are a free camera, texturing on different geometry shapes and transforming those in order to get them in the right location and orientation.  Some features that will be implemented are point and spot lights, more cameras, 
+		The goal of this project is too create a decent looking forest camping scene.  Some features that are implemented are a free camera, texturing on different geometry shapes and transforming those in order to get them in the right location and orientation.  Some features that will be implemented are spot lights, more cameras, shadows and some normal mapping.  This will be an interesting project as i am trying to recreate nature in 3d. 
 	\end{abstract}
     
 	\textbf{Keywords -- }{\mykeywords}
     %START FROM HERE
-	\section{Introduction}
+	\section{Plan}
 	The motivation for this project is the forest and trying to emulate that with a camping scene.  
+	This was based somewhat on \cite{Unity3D}.
+	The main plan is to improve upon The Culling map.
 	
-	Some effects/functions that were used are: 
-	.Free Camera so that there can be any number of different viewpoints that can be achieved.
-	.Loading in textures from downloaded sources.
-	.Using transforms to correctly place my geometry.
+	\subsection{Inspiration}
+	The biggest inspiration for this project is the video game the Culling \cite{TheCulling}.
+	Its map is a massive arena like area covered in forest with some buildings mixed in.
+	The goal of this project is to try and emulate this map but also to try and improve on it by using procedural textures to give it a more natural feel.
+	\section{Related Work}
+	The culling is a game that would be interesting to implement the map of as it looks really good.  The fact that some of the textures look the same across the map makesfor an interesting challenge to try and improve upon that by using procedural texturing.
+	\figuremacro{h}{Culling1}{Culling Map}{This is the centre of the map}{1.0}
+	\section{Current and Future Features}
+	The project itself uses a plane as the ground which will later be changed into terrain.  
+	There is a torus and a pyramid simulating a camp-fire.  There is a point light simulating the firelight.
+	There are no shadows at the moment but the plan is to implement those at a later date.  
+	There is some transforms but no transform hierarchy and the plan is to implement the transforms in a hierarchy.
+	The plan is to try and do some of my textures procedurally \cite{ProceduralTextures}
+	\section{Conclusion}
+	To conclude this project is going to use procedural textures as well as getting some hierarchy transforms, shadows and some normal mapping aswell.  This project is heavily based on the game The Culling.  To summarise i am trying to implement a forest scene similar to the culling map but also i am going to try and improve upon it by using procedural generated textures.  
 	
-    \paragraph{Referencing}
-    You should cite References like this: \cite{Keshav}. The references are saved in an external .bib file, and will automatically be added ot the bibliography at the end once cited.
-    
-    \figuremacro{h}{placeholder}{ImageTitle}{ - Some Descriptive Text}{1.0}
 	
-	\section{Formatting}
-	Some common formatting you may need uses these commands for \textbf{Bold Text}, \textit{Italics}, and \underline{underlined}.
-	\subsection{LineBreaks}
-	Here is a line
-    
-    Here is a line followed by a double line break.
-	This line is only one line break down from the above, Notice that latex can ignore this
-    
-    We can force a break \\ with the break operator.
-    
-	\subsection{Maths}
-    Embedding Maths is Latex's bread and butter    
-    
-    {\centering \Large \(
-        J = \begin{bmatrix}
-            \frac{\delta e}{\delta \theta _0}
-            \frac{\delta e}{\delta \theta _1}
-            \frac{\delta e}{\delta \theta _2}
-        \end{bmatrix}
-        = e_{current} - e_{target} 
-    \)\par}
 	
-	\subsection{Code Listing}
-    You can load segments of code from a file, or embed them directly.
+	
+    %\paragraph{Referencing}
+    %You should cite References like this: \cite{Keshav}. The references are saved in an external .bib file, and will automatically be added ot the bibliography at the end once cited.
     
-\begin{lstlisting}[caption = Hello World! in c++]
-#include <iostream>
+    %\figuremacro{h}{placeholder}{ImageTitle}{ - Some Descriptive Text}{1.0}
+	
+	%\section{Formatting}
+	%Some common formatting you may need uses these commands for \textbf{Bold Text}, \textit{Italics}, and \underline{underlined}.
+	%\subsection{LineBreaks}
+	%Here is a line
+    
+    %Here is a line followed by a double line break.
+	%This line is only one line break down from the above, Notice that latex can ignore this
+    
+    %We can force a break \\ with the break operator.
+    
+	%\subsection{Maths}
+    %Embedding Maths is Latex's bread and butter    
+    
+    %{\centering \Large \(
+     %   J = \begin{bmatrix}
+     %       \frac{\delta e}{\delta \theta _0}
+     %       \frac{\delta e}{\delta \theta _1}
+     %       \frac{\delta e}{\delta \theta _2}
+     %   \end{bmatrix}
+     %   = e_{current} - e_{target} 
+    %\)\par}
+	
+	%\subsection{Code Listing}
+    %You can load segments of code from a file, or embed them directly.
+    
+%\begin{lstlisting}[caption = Hello World! in c++]
+%#include <iostream>
 
-int main() {
-    std::cout << "Hello World!" << std::endl;
-    std::cin.get();
-    return 0;
-}
-\end{lstlisting}
+%int main() {
+ %   std::cout << "Hello World!" << std::endl;
+  %  std::cin.get();
+   % return 0;
+%}
+%\end{lstlisting}
 
-\lstinputlisting[caption = Hello World! in python script]{./sourceCode/hello.py}
+%\lstinputlisting[caption = Hello World! in python script]{./sourceCode/hello.py}
     
-\subsection{PseudoCode}
+%\subsection{PseudoCode}
 
-\begin{algorithm}[h]
-\For{$i = 0$ \KwTo $100$}{
- print\_number = true\;
-\If{i is divisible by 3}{
- print "Fizz"\;
- print\_number = false\;
-}
-\If{i is divisible by 5}{
- print "Buzz"\;
- print\_number = false\;
-}
-\If{print\_number}{
-    print i\;
-}
-print a newline\;
-}
-\caption{FizzBuzz}
-\end{algorithm}
+%\begin{algorithm}[h]
+%\For{$i = 0$ \KwTo $100$}{
+ %print\_number = true\;
+%\If{i is divisible by 3}{
+ %print "Fizz"\;
+ %print\_number = false\;
+%}
+%\If{i is divisible by 5}{
+ %print "Buzz"\;
+ %print\_number = false\;
+%}
+%\If{print\_number}{
+ %   print i\;
+%}
+%print a newline\;
+%}
+%\caption{FizzBuzz}
+%\end{algorithm}
 	
-\section{Conclusion}	
+%\section{Conclusion}	
 \bibliographystyle{ieeetr}
 \bibliography{references}
 		
